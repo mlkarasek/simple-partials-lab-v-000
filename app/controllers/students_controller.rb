@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @classroom = Classroom.first 
+    @classroom = Classroom.first
     @student = Student.new(student_params)
     @student.name = params [:name]
     @student.birthday = params[:birthday]
@@ -23,7 +23,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
-    @student = @student.classroom 
+    @student = @student.classroom
   end
 
   def index
